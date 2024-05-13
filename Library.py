@@ -12,7 +12,7 @@ class Book:
     
     def add_book(self):
         self.title = input("Input the book title: ")
-        self.author = input("Input the name of the author: ")
+        self.author = input("Input the name of the books author: ")
         self.isbn = input("Input the isbn of the book: ")
         self.genre = input("input the books genre: ")
         self.publication_date = input("Input the books publication date: ")
@@ -88,7 +88,6 @@ class Book:
                         "Date": publication_date,
                         "Status": status
                     }
-            print("\nBooks data has been loaded successfully.\n")
         except FileNotFoundError:
             pass
         except Exception as e:
@@ -158,7 +157,6 @@ class User:
                     self.__users[name] = {
                         "Library_id": library_id,
                     }
-            print("\nUsers data has been loaded successfully.\n")
         except FileNotFoundError:
             pass
         except Exception as e:
@@ -211,7 +209,6 @@ class Author:
                     self.authors[name] = {
                         "Biography": biography,
                     }
-            print("\nAuthor data has been loaded successfully.\n")
         except FileNotFoundError:
             pass
         except Exception as e:
@@ -266,7 +263,6 @@ class Genre:
                         "Description": description,
                         "Category": category,
                     }
-            print("\nGenre data has been loaded successfully.\n")
         except FileNotFoundError:
             pass
         except Exception as e:

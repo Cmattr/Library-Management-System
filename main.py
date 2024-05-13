@@ -16,7 +16,7 @@ while True:
             # load book info
             load = Library.Book("title", "author", "isbn", "genre", "date", "status")
             load.load_books()
-            print("\nBook Menu\n1. add book\n2. borrow book.\n3. return book.\n4. Search for a specific library\n5. view all books\n6. view borrowed books\n7. Save\n8. back to main menu")
+            print("\nBook Menu\n1. add book\n2. borrow book.\n3. return book.\n4. Search for a specific book\n5. view all books\n6. view borrowed books\n7. Save\n8. back to main menu")
             book_selection = input("please select an option by number: ")
             # import book methods
             if book_selection == '1':
