@@ -1,3 +1,4 @@
+# import Library file
 import Library
 
 menu_selection = ''
@@ -9,11 +10,15 @@ while True:
 
     book_selection = ''
     while True:
+
+        # implement book class
         if menu_selection == '1':
+            # load book info
             load = Library.Book("title", "author", "isbn", "genre", "date", "status")
             load.load_books()
             print("\nBook Menu\n1. add book\n2. borrow book.\n3. return book.\n4. Search for a specific library\n5. view all books\n6. view borrowed books\n7. Save\n8. back to main menu")
             book_selection = input("please select an option by number: ")
+            # import book methods
             if book_selection == '1':
                 add = Library.Book("title", "author", "isbn", "genre", "date", "status" )
                 add.add_book()
@@ -37,12 +42,15 @@ while True:
                 save.save_book_info("Saved_books.txt")
             elif book_selection == '8':
                 break
-        
+
+        # implement user class
         if menu_selection == '2':
+            # load user info
             load = Library.User("name", "library_id")
             load.load_users()
             print("\nUser Menu\n1.Add user\n2.Search user\n3.View all users\n4.save\n5.back to main menu")
             user_selection = input("Please select an option by number: ")
+            # import user methods
             if user_selection == '1':
                 add = Library.User("name", "library_id")
                 add.add_user()
@@ -58,11 +66,14 @@ while True:
             elif user_selection == '5':
                 break
         
+        # implement author class
         if menu_selection == '3':
+            # load author info
             load = Library.Author("author_id", "biography")
             load.load_authors()
             print("\nAuthor Menu\n1.Add author\n2.Search author\n3.View all authors\n4.save\n5.back to main menu")
             author_selection = input("Please select an option by number: ")
+            # import author methods
             if author_selection == '1':
                 add = Library.Author("author_id", "biography")
                 add.add_author()
@@ -78,11 +89,14 @@ while True:
             elif author_selection == '5':
                 break
 
+        # implement genre methods
         if menu_selection == '4':
+            # loads genre info
             load = Library.Genre('name', 'description', 'category')
             load.load_genres()
             print("\nGenre Menu\n1.Add Genre\n2.Search Genre\n3.View all Genres\n4.save\n5.back to main menu")
             genre_selection = input("Please select an option by number: ")
+            # import genre methods
             if genre_selection == '1':
                 add = Library.Genre("name", "description", "category")
                 add.add_genre()

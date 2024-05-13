@@ -1,7 +1,7 @@
 class Book:
     books = {}
     borrowed_books = {}
-    
+    # book methods
     def __init__(self, title, author, isbn, genre, publication_date, status):
         self.title = title
         self.author = author
@@ -96,7 +96,7 @@ class Book:
 
 class User:
     __users = {}
-
+    # user methods
     def __init__(self, name, library_id):
         self.__name = name
         self.__library_id = library_id
@@ -167,7 +167,7 @@ class User:
 
 class Author:
     authors = {} 
-
+    # author methods
     def __init__(self, name, biography):
         self.name = name
         self.biography = biography
@@ -219,7 +219,7 @@ class Author:
 
 class Genre:
     genres = {} 
-
+    # genre methods
     def __init__(self, name, description, category):
         self.name = name
         self.description = description
